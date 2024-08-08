@@ -1,0 +1,5 @@
+package com.javagiants.todolist.models;
+
+public class TaskList {
+
+}
