@@ -1,0 +1,17 @@
+.root {
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-background-color: #FFFFFF;
+}
+
+.button {
+    -fx-font-size: 14px;
+}
+
+.label {
+    -fx-font-size: 18px;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+}

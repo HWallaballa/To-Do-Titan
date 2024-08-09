@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.javagiants.todolist.controllers.TaskController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+    
+    <Label text="To-Do List Application" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="10" vgap="10">
+        <TextField fx:id="titleField" promptText="Title" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextArea fx:id="descriptionField" promptText="Description" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+        <DatePicker fx:id="dueDateField" promptText="Due Date" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="priorityField" promptText="Priority" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <ComboBox fx:id="categoryField" promptText="Category" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Slider fx:id="progressSlider" min="0" max="100" showTickLabels="true" showTickMarks="true" 
+                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        
+        <Button text="Add Task" onAction="#handleAddTask" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <Button text="Remove Task" onAction="#handleRemoveTask" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+    
+    <HBox spacing="10">
+        <Button text="Filter by Category" onAction="#handleFilterByCategory"/>
+        <Button text="Sort by Priority" onAction="#handleSortByPriority"/>
+        <Button text="Sort by Due Date" onAction="#handleSortByDueDate"/>
+        <Button text="Update Progress" onAction="#handleUpdateProgress"/>
+    </HBox>
+    
+    <ListView fx:id="taskListView" VBox.vgrow="ALWAYS"/>
+</VBox>
