@@ -1,0 +1,72 @@
+ToDoList Application
+
+Overview
+This ToDoList application is a JavaFX-based task management system that allows users to create, manage, and organize their tasks efficiently.
+
+Features
+- Add new tasks with title, description, due date, priority, and category
+- Remove existing tasks
+- Filter tasks by category
+- Sort tasks by priority or due date
+- Update task progress
+- Support for different task types (generic tasks, meeting tasks, and project tasks)
+
+Prerequisites
+- Java Development Kit (JDK) 8 or higher
+- JavaFX SDK (included in JDK 8, but needs to be added separately for JDK 11+)
+- An IDE that supports Java and JavaFX 
+
+Project Structure
+com.javagiants.todolist/
+├── controllers/
+│   └── TaskController.java
+├── models/
+│   ├── Task.java
+│   ├── MeetingTask.java
+│   ├── ProjectTask.java
+│   ├── TaskList.java
+│   └── TaskType.java
+├── views/
+│   └── TaskView.fxml
+└── Main.java
+
+Setup Instructions
+1. Clone the repository or download the source code.
+2. Open the project in your preferred IDE.
+3. Ensure that JavaFX is properly set up in your development environment.
+4. Build the project to resolve any dependencies.
+
+Running the Application
+1. Locate the Main.java file in the project structure.
+2. Run the main method in the Main class.
+3. The application window should appear, displaying the ToDoList interface.
+
+Using the Application
+1. Adding a Task:
+   - Fill in the task details in the provided fields.
+   - Click the "Add Task" button to create a new task.
+
+2. Removing a Task:
+   - Select a task from the list.
+   - Click the "Remove Task" button to delete the selected task.
+
+3. Filtering Tasks:
+   - Select a category from the dropdown.
+   - Click the "Filter by Category" button to show tasks in that category.
+
+4. Sorting Tasks:
+   - Click "Sort by Priority" or "Sort by Due Date" to reorder the task list.
+
+5. Updating Task Progress:
+   - Select a task from the list.
+   - Adjust the progress slider.
+   - Click "Update Progress" to save the changes.
+
+Customization
+- To add new task types, extend the Task class and update the TaskController to handle the new type.
+- Modify the TaskView.fxml file to change the layout or add new UI elements.
+
+Troubleshooting
+- If the application fails to start, ensure that JavaFX is properly configured in your project settings.
+- For any NullPointerExceptions, check that all FXML elements are correctly linked to the controller.
+
